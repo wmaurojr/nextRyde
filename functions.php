@@ -26,3 +26,5 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+show_admin_bar( false );

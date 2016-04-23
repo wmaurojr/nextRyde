@@ -1,0 +1,13 @@
+.submit {
+	width: 120px;
+	height: 50px;
+	background-color: transparent;
+	color: white;
+	border: 3px solid white;
+	font-weight: 1.5em;
+	text-transform: uppercase;
+}
+
+.submit:hover {
+	background-color: $brand-secondary;
+}

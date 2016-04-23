@@ -19,9 +19,34 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
-    }
+    },
+    "mmenu.js": {
+      "vendor": [
+        "scripts/jquery.mmenu.all.min.js"
+      ]
+   },
+   "mmenu.css": {
+      "vendor": [
+        "styles/vendor/jquery.mmenu.all.css"
+      ]
+   }
   },
+  "jquery-color.js": {
+      "vendor": [
+        "scripts/jquery.color.min.js"
+      ]
+   },
+   "line.css": {
+      "vendor": [
+        "styles/vendor/line.css"
+      ]
+   },
+   "line.js": {
+      "vendor": [
+        "scripts/line.js"
+      ]
+   },
   "config": {
-    "devUrl": "http://example.dev"
+    "devUrl": "http://localhost:8888/nr"
   }
 }

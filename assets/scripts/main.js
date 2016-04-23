@@ -19,6 +19,26 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        // Fire jQuery mmenu
+        $(".nav-primary").mmenu({
+      }, {
+         // configuration
+         offCanvas: {
+            pageSelector: "#mmenu-wrapper"
+         }
+      });
+
+        // Toggle Menu Icon 
+
+        $('#navToggle').on('click', function(){
+          var $navToggle = $('#navToggle');
+          var $ifa = $(this).find('i.fa');
+          
+          $ifa.toggleClass('fa-bars fa-times');
+
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -28,6 +48,49 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+
+        $('.allwayround').borderContinuous(0.8, "1px", "onhover", "white"); 
+
+        // set variable for spectrum time
+        var time = 500;
+
+        function spectrum() {  
+          var colors = Array('#007e87', '#ded000', '#d1451d');
+          var color = colors[Math.floor(Math.random()*colors.length)];  
+          $('.dynamicBorder').find('.border-continuous').children().animate({
+                backgroundColor: color
+            }, time);
+           
+        }
+
+        setInterval(spectrum, time);
+
+        setInterval(function () {
+        textSlider();
+    }, 6500);
+  
+    function textSlider(){
+
+      var $width = $('.sliderBody').width();
+      var $body = $('body');
+      
+      $('.sliderBody ul li').css('width', $width);
+      
+      $('.slider-ul').animate({
+        left: -$width
+      }, 1500, function(){
+        $('.slider-ul li:last').after($('.slider-ul li:first'));
+        $('.slider-ul').css('left', '0');
+
+        var $width = $('.sliderBody').width();
+        
+    });
+  };
+
+
+        
+
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

@@ -1,0 +1,33 @@
+#header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 9999;
+}
+
+#headerLogo {
+	font-family: $roboto;
+	color: white;
+	font-size: 2.2rem;
+	text-transform: uppercase;
+	line-height: 2.5em;
+	margin-left: 10px;
+}
+
+#heroTemp {
+	width: 100%;
+}
+
+#navToggle {
+	position: absolute;
+	left: 0;
+	background-color: #826401;
+	padding: 0 12px;
+	z-index: 9999;
+	cursor: pointer;
+}
+
+#navToggle:hover {
+	background-color: $brand-primary;
+}
