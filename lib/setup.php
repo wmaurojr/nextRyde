@@ -92,6 +92,27 @@ function display_sidebar() {
 }
 
 /**
+* Register Custom Post Types
+* ** Rydes **
+**/
+
+add_action( 'init', 'create_post_type' );
+
+function create_post_type() {
+  register_post_type( 'nr_ryde',
+    array(
+      'labels' => array(
+        'name' => __( 'Rydes' ),
+        'singular_name' => __( 'Ryde' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'taxonomies' => Array('category', 'post_tag')
+    )
+  );
+}
+
+/**
  * Theme assets
  */
 function assets() {
